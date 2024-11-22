@@ -1,13 +1,61 @@
-body {
+* {
+  font-size: 1rem;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+}
+.count-container {
+  background-color: #fff;
+  padding: 1em 3.5em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.count-container h1 {
+  font-size: 1.75em;
+  text-transform: uppercase;
+  /* margin-bottom: 0.75em; */
+}
+.count-output {
+  font-size: 3.5em;
+  font-weight: 300;
+}
+.count-buttons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5em;
+}
+.count-button {
+  padding: 0.5em;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  background-color: hsl(230, 100%, 30%);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.count-button--red {
+  background-color: hsl(0, 100%, 30%);
+}
+.count-button:hover {
+  background-color: hsl(230, 100%, 50%);
+}
+.count-button--red:hover {
+  background-color: hsl(0, 100%, 50%);
 }
