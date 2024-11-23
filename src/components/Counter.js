@@ -4,6 +4,9 @@ const Counter = () => {
   const handleChangeCount = () => {
     setCount(count + 1);
   };
+  const handlePlusTen = () => {
+    setCount(count + 10);
+  };
   const handleResetCount = () => {
     setCount(0);
   };
@@ -14,6 +17,12 @@ const Counter = () => {
       <div className="count-buttons">
         <button className="count-button" onClick={handleChangeCount}>
           Count
+        </button>
+        <button
+          className="count-button count-button--green"
+          onClick={handlePlusTen}
+        >
+          +10
         </button>
         <button
           className="count-button count-button--red"
